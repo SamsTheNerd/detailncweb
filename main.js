@@ -26,8 +26,11 @@ var genFakeProjectsData = () => {
 var genPreviewCard = (project, index) => {
     var htmlString = `
         <div class="project-card" id="project-card-${index}" onclick="setActiveProject(${index})">
-            <img src="${project.image}"/>
-            <h3 class="project-card-title">${project.title}</h3>
+            <div class="project-card-contents">
+                <img src="${project.image}"/>
+                <h3 class="project-card-title">${project.title}</h3>
+            </div>
+            <div class="project-card-back"></div>
         </div>
     `
     return htmlString
